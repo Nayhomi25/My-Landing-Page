@@ -1,0 +1,269 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>URBANLY</title>
+  <!-- Load Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">  
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400&display=swap" rel="stylesheet">
+   
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  rel="stylesheet" >
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900/Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+  <header class="pageheader">
+    <div class="navbar" id="nav_bar">
+      <div class="logo" id="logos">
+        <img src="pictures/logo.png" alt="logo">
+      </div>
+      <nav class="navbar__menu">
+        <!-- Navigation starts as empty UL that will be populated with JS -->
+        <ul id="navbar__list">
+          
+  
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+  <main>
+    <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+    <section id="section1" data-nav="Home" class="your-active-class">
+      <div class="landing__container">
+        <h1>Welcome To Urbanly</h1>
+        <h3>Serving the Food Industry for 10 Amazing Years</h3>
+        <p>At urbanly we do our best to provide quality in every service we have to offer </p>
+
+        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      </div>
+    </section>
+
+
+
+    <button type="button" class="collapsible">WHAT WE DO. Take a look at what we have to offer</button>
+    <section id="section2" data-nav="Our Services">
+      <div class="landing__container2" id="reviews">
+        <h2>Our Services</h2>
+        <div class="cardx" id="columns">
+          <img src="pictures/hydro.jpg" alt="minerals1">
+          <h3>Organic Food</h3>
+          <p>We produce food through soiless methods like Hydroponics, Aeroponics and Aquaponics. With Experts to monitor the whole process from planting to harvest.</p>
+        </div>
+
+        <div class="cardx" id="columns">
+          <img src="pictures/seed-packet-pic-3.jpg" alt="minerals1">
+          <h3>Planting Materials</h3>
+          <p>We sell High quality seeds and materials, everything you need to start off either as a small garden owner or as a for profit farmer.</p>
+        </div>
+
+        <div class="cardx" id="columns">
+          <img src="pictures/consultancy.jpg" alt="minerals1">
+          <h3>Agricultural Consultancy</h3>
+          <p>Interested in having your own setup and not sure where to start? We can hold your hand and walk you through the process of getting your farm up and runnung.</p>
+        </div>
+
+        <div class="cardx" id="columns">
+          <img src="pictures\greenhouse.jpg" alt="minerals1">
+          <h3>Greenhouse installation</h3>
+          <p>Purchase your very own greenhouse from us at affordable prices and we install for all our customers at no extra charge. </p>
+        </div>
+      
+      </div>
+    </section>
+
+
+    <button type="button" class="collapsible">WHY CHOOSE US? See what makes us special</button>
+    <section id="section3" data-nav="Why Us">
+      <div class="landing__container3" id="slideshow">
+        <h2>WHY CHOOSE US</h2>
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="pictures/handpicked.jpg">
+          <div class="text">All fruits and vegetables are handpicked to minize damage to the skins</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img src="pictures/affordable 2.jpg">
+          <div class="text">Affordable prices for both wholesale and retail customers</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="pictures/fresh delivery 2.jpg">
+          <div class="text">All produces are delivered with 48hrs of harvest to ensure continued freshness</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 4</div>
+          <img src="pictures/cos service.jpg">
+          <div class="text">Amazing customer services</div>
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+     
+      </div>
+    </section>
+    
+
+    
+    <button type="button" class="collapsible">Need Proof? Here's what our clients have to say about our services</button>
+    <section id="section4" data-nav="Clients">
+      <div class="landing__container4" id="reviews">
+        <h2>Testimonials</h2>
+
+        <img src="pictures/quote.png" alt="quote" class="quotation-mark">
+        <div class="review" id="column">
+          <p>I have been able to start my vwry own backyard garden using tips from the writers at urbanly newsletters. They provide healthy seeds and planting materials at affordable prices.</p>
+          <img src="pictures/naomi.jpg" alt="profile picture" class="profile">
+          <h3 class="theh">Osunde Naomi</h3>
+          <h4 class="thehh">Gardener</h4>
+        </div>
+        <div class="review" id="column">
+          <p>We use heirloom seeds and planting propagules acquired from urbanly to grow healthy heirloom fruits and vegetables for our discerning customers.</p>
+          <img src="pictures/writer.jpg" alt="profile picture" class="profile">
+          <h3 class="theh">Aliu Hilary</h3>
+          <h4 class="thehh">Owner, Rare Gardens</h4>
+        </div>
+        <div class="review" id="column">
+          <p>Urbanly delivers fresh, quality and fairly priced food produce with fast delivery. Produce are Fresh and free of Blemish</p>
+          <img src="pictures/osasu.jpg" alt="profile picture" class="profile">
+          <h3 class="theh">Osasu Emmanuel</h3>
+          <h4 class="thehh">Owner, Guy's Grocers</h4>
+        </div>
+
+        <div class="review" id="column">
+          <p>As a chef, i only cook with the most premium ingredients to guarantee exquisite taste and all produce delivered from Urbanly exceeds my expectations each and everytime.</p>
+          <img src="pictures/mudia.jpg" alt="profile picture" class="profile">
+          <h3 class="theh">Osamudiame Andrew</h3>
+          <h4 class="thehh">Head Chef, The Grill</h4>
+        </div>
+        
+     
+      </div>
+    </section>
+
+
+    <button type="button" class="collapsible">Need a little home project? we give tips on how to start your vey own urban garden</button>
+    <section id="section5" data-nav="Subscribe">
+      <div class="landing__container5">
+        <h2>Let's Keep In Touch</h2>
+        <center>
+          <div class="card">
+              <h2>Subscribe to our Monthly Newsletter</h2>
+  
+              <p>Keep up with trending technology and receive tips on starting and maintaining your urban or backyard garden as well as first knowledge on ongoing sales and get amazing discounts for special items
+              </p>
+              <form> 
+                  <label for="email"></label>
+                  <input type="email" id="email" placeholder="email@example.com">
+                  <button>Subscribe</button>
+            </form>
+                
+          </div>
+      </center>
+      
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="page__footer">
+    <div class="logo">
+      <img src="pictures/logo.png" alt="logo" >
+     </div>
+    <div class="row">
+      <div class="lorem">
+        <p class="txt">
+          <div class="location">
+            <i class="fa fa-map-marker" aria-hidden="true"></i> 
+           </div>
+            lorem ipsum dolor sit amet,
+           consectetur adipiscing elit, sed do eiusmod<br/> tempor incididunt ut labore et dolore 
+           magna aliqua                  
+         </p>
+      </div>
+      <div class="mail-contact">
+        <div class="phone">
+           <p>
+             <div class="location">
+               <i class="fa fa-phone" aria-hidden="true"></i></div>
+            +234-803-276-5473
+            </p>
+          </div>
+        <div class="mail">
+            <p>
+              <div class="location">
+                <i class="fa fa-envelope" aria-hidden="true"></i></div>
+                  consumerservice@urbanly.com</p>
+              </div>
+       </div>
+     
+       <div class="about">
+                 <ul>
+                              <li>About Us</li>
+                              <li>jobs</li>
+                              <li>press</li>
+                              <li>blog</li>
+                          </ul>
+                  </div>
+
+              <div class="contact">
+          
+                      <ul>
+                          <li>Contact Us </li>
+                          <li>terms</li>
+                          <li>privacy</li>
+                      </ul>
+      
+      
+      </div>
+      <div class="iconn">
+              <div class="icon">
+                  <i class="fa fa-facebook"></i>
+              </div>
+              <div class="icon">
+                  <i class="fa fa-twitter"> </i>
+              </div>
+              
+              <div class="icon">
+                  <i class="fa fa-instagram"> </i>
+              </div>
+    </div>
+              
+      
+  </div>
+
+      </div>
+      <p>&copy Udacity</p>
+  </footer>
+  <button id="top">TOP</button>
+  <script src="java\app.js"></script>
+
+</body>
+</html>
